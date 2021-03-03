@@ -1,5 +1,5 @@
 {
-  "name": "tp-responsive-01-flex",
+  "name": "frontend-project",
   "version": "1.0.0",
   "description": "Pour se familiariser avec les différentes propriétés :\r [Flexbox Froggy](https://flexboxfroggy.com/#fr)",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bazbinson/tp-responsive-01-flex.git"
+    "url": "git+https://github.com/bazbinson/frontend-project.git"
   },
   "author": "bazbinson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bazbinson/tp-responsive-01-flex/issues"
+    "url": "https://github.com/bazbinson/frontend-project/issues"
   },
-  "homepage": "https://github.com/bazbinson/tp-responsive-01-flex#readme",
+  "homepage": "https://github.com/bazbinson/frontend-project#readme",
   "devDependencies": {
     "parcel": "^1.12.4",
     "pug": "^3.0.0",
