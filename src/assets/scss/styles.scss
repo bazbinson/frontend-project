@@ -1,1 +1,26 @@
 @import "reset";
+@import "font";
+header {
+  height: 145px;
+  background-color: black;
+}
+
+body {
+  height: 150vh;
+  background-color: #eeeeee;
+}
+
+.carousel {
+  height: 20%;
+}
+.presentation {
+  height: 40%;
+}
+.shop {
+  height: 40%;
+}
+
+footer {
+  height: 100px;
+  background-color: black;
+}

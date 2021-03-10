@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url(./../fonts/Ubuntu-Bold.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(./../fonts/Ubuntu-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url(./../fonts/Ubuntu-Light.ttf) format("truetype");
+  font-display: swap;
+}
+
+html {
+  font-size: 10px;
+}
+:root {
+  --main-content-size: 1.6rem;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--main-content-size);
+}
