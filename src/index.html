@@ -3,31 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#000000" />
+    <!-- END FAVICON -->
     <link rel="stylesheet" href="./assets/scss/styles.scss" />
-    <title>Boutique de sabres lasers</title>
+    <title>HitSaber | Entrez dans la compétition</title>
   </head>
   <body>
     <header>
-      <div class="header__title">Titre</div>
+      <div class="header__title">
+        <h1>HitSaber</h1>
+      </div>
       <nav class="header__menu">
         <ul>
-          <li>Menu 1</li>
-          <li>Menu 2</li>
-          <li>Menu 3</li>
-          <li>Menu 4</li>
+          <li><a href="#presentation">Présentation</a></li>
+          <li><a href="#shop">Boutique</a></li>
+          <li><a href="#club">Le Club</a></li>
         </ul>
       </nav>
       <div class="header__social">
-        <img src="" alt="fb" />
-        <img src="" alt="twitter" />
-        <img src="" alt="insta" />
+        <a href="#"><img src="./assets/img/facebook.svg" alt="" /></a>
+        <a href="#"><img src="./assets/img/instagram.svg" alt="" /></a>
+        <a href="#"><img src="./assets/img/youtube.svg" alt="" /></a>
       </div>
     </header>
     <main>
-      <section class="carousel">Un carousel</section>
-      <section class="presentation">Présentation</section>
-      <section class="shop">Boutique</section>
+      <section class="image">
+        <img src="./assets/img/lightsaber-big.png" alt="" />
+        <div class="image__text">
+          <p>
+            Le <strong>HitSaber</strong> possède une qualité d'éclairage et une
+            facilité de prise en main hors pairs !
+          </p>
+        </div>
+      </section>
+      <section class="presentation">
+        <div id="presentation" class="scroll__anchor"></div>
+        <h2>Présentation</h2>
+        <div class="presentation__text">
+          <p>
+            Nous avons tous rêvé, après avoir regardé des centaines de fois
+            cette saga mythique, de posséder et se servir d'un véritable sabre
+            laser.
+          </p>
+          <p>
+            Aujourd'hui, avec le <strong>HitSaber</strong>, c'est enfin possible
+            !
+          </p>
+          <p>
+            Notre équipe a travaillé très dur afin de créerp ce modèle de haute
+            qualité, accessible à tous. Son style élégant, ses effets sonores de
+            haute qualité et sa robustesse vous permettront de vous battre
+            contre les plus féroces adversaires sans problème !
+          </p>
+        </div>
+      </section>
+      <section class="shop">
+        <div id="shop" class="scroll__anchor"></div>
+        <h2>Boutique</h2>
+        <div class="shop__lightsaber">
+          <div class="lightsaber__animation">
+            <img src="./assets/img/lightsaber_handle.png" alt="" />
+            <div class="lightsaber__blade"></div>
+          </div>
+          <div class="lightsaber__colors">
+            <button id="blue">Bleu</button>
+            <button id="red">Rouge</button>
+            <button id="green">Vert</button>
+          </div>
+          <button id="off">Eteindre</button>
+        </div>
+        <p>
+          *Les couleurs sont entièrement personnalisables grâce à l'application
+          <i>HitSaber colors</i>
+        </p>
+        <a class="button" href="#">Commander</a>
+      </section>
+      <section class="club">
+        <div id="club" class="scroll__anchor"></div>
+        <h2>Le Club</h2>
+        <div class="club__presentation">
+          <img src="./assets/img/escrime.jpg" alt="" />
+          <div class="club__text">
+            <p>
+              En Février 2019, le combat au sabre laser a été reconnu comme un
+              sport officiel en France, au sein de la Fédération Française
+              d'Escrime.
+            </p>
+            <p>
+              Nous avons ainsi décidé de créer un club afin de proposer aux
+              sportifs ainsi qu'aux fans des entraînements, activités et
+              tournois toujours accessibles à tous.
+            </p>
+            <a class="button" href="#">Plus d'infos</a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

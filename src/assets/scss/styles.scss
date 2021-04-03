@@ -1,23 +1,225 @@
 @import "reset";
 @import "font";
-header {
-  height: 145px;
-  background-color: black;
+
+html {
+  scroll-behavior: smooth;
 }
 
-main {
-  height: 150vh;
+html img {
+  /* no-select */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                      supported by Chrome, Edge, Opera and Firefox */
+  /* no-drag */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* Règle afin que le scroll par ID amène à l'élément en dessous du header en fixed */
+.scroll__anchor {
+  display: block;
+  position: absolute;
+  top: -150px;
+  visibility: hidden;
+}
+
+body {
   background-color: #eeeeee;
 }
 
-.carousel {
-  height: 20%;
+header {
+  height: 145px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  color: #eeeeee;
+  background-color: black;
 }
-.presentation {
-  height: 40%;
+.header__menu {
+  width: 45%;
 }
-.shop {
-  height: 40%;
+.header__menu > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu a {
+  transition: color 0.3s;
+}
+.header__menu a:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  transition: width 0.3s;
+}
+.header__menu a:hover:after {
+  width: 100%;
+}
+.header__menu li:first-of-type a:hover {
+  color: #8fd0e6;
+}
+.header__menu li:first-of-type a:after {
+  background: #0268e6;
+}
+.header__menu li:nth-of-type(2) a:hover {
+  color: #df5837;
+}
+.header__menu li:nth-of-type(2) a:after {
+  background: #ad3434;
+}
+.header__menu li:last-of-type a:hover {
+  color: #9ddf76;
+}
+.header__menu li:last-of-type a:after {
+  background: #6b9b4f;
+}
+.header__social {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__social > a > img {
+  height: 35px;
+  width: 35px;
+}
+
+main > section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main > section:first-of-type ~ section {
+  padding: 50px;
+  border-bottom: 2px solid black;
+}
+main > section:last-of-type {
+  border-bottom: 0;
+}
+
+.button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: #deedf1;
+  color: black;
+  position: relative;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  border-radius: 25px;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+.button:hover:before {
+  width: 100%;
+  box-shadow: 0 0 20px #0268e6;
+}
+
+.image__text {
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  color: #eeeeee;
+  text-align: center;
+}
+
+.presentation__text {
+  width: 70%;
+  text-align: center;
+}
+.presentation__text > p {
+  margin-top: 25px;
+}
+
+.shop__lightsaber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.lightsaber__animation {
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.lightsaber__animation > img {
+  width: 350px;
+  position: relative;
+  z-index: 2;
+}
+.lightsaber__blade {
+  height: 30px;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 275px;
+  z-index: 1;
+  transition: 0.3s linear;
+}
+.lightsaber__colors {
+  margin: 25px 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.shop__lightsaber button {
+  color: #eeeeee;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 15px 20px;
+  cursor: pointer;
+  border: none;
+}
+.lightsaber__colors > button:first-of-type {
+  background-color: #0268e6;
+}
+.lightsaber__colors > button:nth-of-type(2) {
+  background-color: #ad3434;
+}
+.lightsaber__colors > button:last-of-type {
+  background-color: #6b9b4f;
+}
+.shop__lightsaber > button {
+  background-color: black;
+}
+.shop > p {
+  margin: 25px 0;
+}
+
+.club__presentation {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+.club__presentation > img {
+  width: 350px;
+}
+.club__text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.club__text > * {
+  margin-top: 15px;
 }
 
 footer {

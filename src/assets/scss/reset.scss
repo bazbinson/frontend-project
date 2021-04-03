@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: unset;
   text-decoration: none;
 }
 p {
@@ -19,4 +19,5 @@ li {
 }
 img {
   max-height: 100%;
+  max-width: 100%;
 }
