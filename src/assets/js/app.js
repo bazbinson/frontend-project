@@ -30,6 +30,7 @@ window.addEventListener("DOMContentLoaded", function () {
           blade.style.width = "200%";
         }
       } else {
+        // C'est forcément le bouton "Eteindre"
         blade.style.width = "0";
         setTimeout(function () {
           blade.style.boxShadow = "none";

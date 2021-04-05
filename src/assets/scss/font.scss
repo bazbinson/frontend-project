@@ -25,21 +25,31 @@ body {
 }
 
 // Médias queries pour l'adaptation à tous les supports
+
 // Adaptations pour les téléphones
 @media screen and (max-width: 650px) {
   html {
     font-size: 7px;
   }
 }
+
 // Adaptations pour les tablettes et écrans d'ordinateur à faible résolution
 @media screen and (max-width: 1050px) {
   html {
     font-size: 8px;
   }
 }
-// Adaptations pour els écrans full HD et +
+
+// Adaptations pour las écrans full HD et +
 @media screen and (min-width: 1050px) {
   html {
     font-size: 10px;
+  }
+}
+
+// Adaptations pour les grands écrans
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 12px;
   }
 }

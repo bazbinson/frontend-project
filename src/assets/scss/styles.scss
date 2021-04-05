@@ -39,7 +39,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
   color: #eeeeee;
   background-color: black;
 }
@@ -54,6 +53,7 @@ header {
 .header__menu a {
   transition: color 0.3s;
 }
+// Animation de la ligne sous les liens du header au hover
 .header__menu a:after {
   content: "";
   display: block;
@@ -82,6 +82,7 @@ header {
 .header__menu li:last-of-type a:after {
   background: #6b9b4f;
 }
+// Parties réseaux sociaux
 .header__social {
   width: 150px;
   display: flex;
@@ -100,6 +101,7 @@ main > section {
 }
 main > section:first-of-type ~ section {
   border-bottom: 2px solid black;
+  padding: 25px;
 }
 main > section:last-of-type {
   border-bottom: 0;
@@ -108,6 +110,7 @@ main > section > div:nth-of-type(2) {
   padding: 25px 0;
 }
 
+// Style global des boutons
 .button {
   padding: 15px 20px;
   border-radius: 25px;
@@ -131,6 +134,7 @@ main > section > div:nth-of-type(2) {
   box-shadow: 0 0 20px #0268e6;
 }
 
+// Affiche du texte par dessus l'image en haut de page
 .image__text {
   width: 100%;
   position: absolute;
@@ -151,6 +155,7 @@ main > section > div:nth-of-type(2) {
   align-items: center;
   margin-top: 25px;
 }
+// Bloc contenant l'image du manche et la lame du sabre laser à animer
 .lightsaber__animation {
   display: flex;
   justify-content: space-between;
@@ -159,13 +164,13 @@ main > section > div:nth-of-type(2) {
   left: -350px;
   margin-top: 15px;
 }
+// Manche du sabre
 .lightsaber__animation > img {
-  width: 350px;
   position: relative;
   z-index: 2;
 }
+// Lame du sabre, le width est attribué lors de l'activation par clic sur un des boutons du site
 .lightsaber__blade {
-  height: 30px;
   width: 0;
   border-radius: 25px;
   position: absolute;
@@ -173,12 +178,14 @@ main > section > div:nth-of-type(2) {
   z-index: 1;
   transition: 0.3s linear;
 }
+// Boutons pour activer / changer la couleur du sabre
 .lightsaber__colors {
   margin: 25px 0;
   width: 500px;
   display: flex;
   justify-content: space-between;
 }
+// Bouton pour éteindre le sabre
 .shop__lightsaber button {
   font-family: inherit;
   font-size: inherit;
@@ -187,6 +194,7 @@ main > section > div:nth-of-type(2) {
   border: none;
   outline: none;
 }
+// Couleurs des 3 premiers boutons
 .lightsaber__colors > .button:first-of-type {
   color: #0268e6;
   background-color: #deedf1;
@@ -208,6 +216,7 @@ main > section > div:nth-of-type(2) {
 .lightsaber__colors > .button:last-of-type:hover:before {
   box-shadow: 0 0 20px #6b9b4f;
 }
+// Couleur du bouton éteindre
 .shop__lightsaber > .button {
   background-color: #d0d9db;
 }
@@ -244,8 +253,10 @@ footer {
 }
 
 // Médias queries pour l'adaptation à tous les supports
+
 // Adaptations pour les téléphones
 @media screen and (max-width: 650px) {
+  // Passage du header en colonne pour plus de lisibilité
   header {
     height: 175px;
     flex-direction: column;
@@ -256,22 +267,22 @@ footer {
   }
   .header__social > a > img {
     height: 25px;
-  }
-
-  main > section:first-of-type ~ section {
-    padding: 25px;
+    width: 25px;
   }
 
   .image {
     display: none;
   }
 
+  // On tourne le sabre en vertical car il ne rentre plus en horizontal
   .lightsaber__animation {
     height: 675px;
     flex-direction: column;
     left: 0;
   }
+  // Il doit donc être replacé un peu
   .lightsaber__animation > img {
+    height: 47px;
     width: 200px;
     transform: rotate(270deg);
     bottom: -545px;
@@ -279,7 +290,7 @@ footer {
   .lightsaber__blade {
     height: 500px;
     width: 20px;
-    left: 89.5px;
+    left: 90px;
     top: 20px;
   }
   .lightsaber__colors {
@@ -294,26 +305,25 @@ footer {
     flex-direction: column;
   }
   .club__presentation > img {
-    width: 310px;
+    height: 180px;
+    width: 270px;
   }
   .club__text {
     width: 85%;
   }
 }
+
 // Adaptations pour les tablettes et écrans d'ordinateur à faible résolution
 @media screen and (min-width: 650px) and (max-width: 1050px) {
   header {
     padding: 0 50px;
   }
 
-  main > section:first-of-type ~ section {
-    padding: 25px;
-  }
-
   .lightsaber__animation {
     left: -200px;
   }
   .lightsaber__animation > img {
+    height: 47px;
     width: 200px;
   }
   .lightsaber__blade {
@@ -322,13 +332,26 @@ footer {
   }
 
   .club__presentation > img {
+    height: 133px;
     width: 200px;
   }
 }
-// Adaptations pour els écrans full HD et +
+
+// Adaptations pour les écrans full HD et +
 @media screen and (min-width: 1050px) {
+  header {
+    padding: 0 100px;
+  }
+
   main > section:first-of-type ~ section {
     padding: 50px;
+  }
+
+  .lightsaber__animation > img {
+    width: 350px;
+  }
+  .lightsaber__blade {
+    height: 30px;
   }
 
   .club__presentation > img {
